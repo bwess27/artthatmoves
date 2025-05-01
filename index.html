@@ -8,19 +8,19 @@
   <style>
     :root {
       --accent: #fd5e53;
-      --dark-bg: #1b1b1f;
-      --mid-bg: #2a2a31;
-      --light-text: #fff8f2;
+      --dark-bg: #000000;
+      --mid-bg: #111111;
+      --light-text: #ffffff;
       --muted-text: #cccccc;
-      --header-text: #ffe6de;
-      --highlight: #ff9b85;
+      --header-text: #ffd5cc;
+      --highlight: #ffa38f;
     }
 
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: var(--dark-bg);
-      color: #ffffff;
+      color: var(--light-text);
       overflow-x: hidden;
     }
     header {
@@ -78,7 +78,7 @@
       animation: fadeIn 2s ease-in;
     }
     .project {
-      background: #3a3a42;
+      background: #1a1a1a;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -116,6 +116,10 @@
     a {
       color: var(--accent);
       text-decoration: none;
+    }
+    a:hover {
+      opacity: 0.8;
+      transition: opacity 0.2s;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
