@@ -18,18 +18,33 @@
       padding: 4rem 1rem 1rem;
       background: #fd5e53;
       color: #f0f0f0;
+      position: relative;
     }
     header h1 {
       font-size: 3rem;
       margin: 0;
+      animation: fadeInDown 1s ease-out;
     }
     header p {
       font-size: 1.25rem;
       color: #ccc;
       margin-top: 0.5rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 1rem;
+    }
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
     }
     .hero-image {
-      background-image: url('https://images.unsplash.com/photo-1605939057927-df77a2eb6cf9?auto=format&fit=crop&w=1950&q=80');
+      background-image: url('/mnt/data/martin-martz-APElyQpGke0-unsplash.jpg');
       height: 60vh;
       background-attachment: fixed;
       background-position: center;
@@ -49,6 +64,7 @@
       gap: 2rem;
       padding: 3rem 2rem;
       background: #121212;
+      animation: fadeIn 2s ease-in;
     }
     .project {
       background: #1f1f1f;
@@ -63,8 +79,9 @@
     }
     .project img {
       width: 100%;
-      height: 200px;
+      height: auto;
       object-fit: cover;
+      display: block;
     }
     .project-content {
       padding: 1rem;
@@ -88,6 +105,46 @@
       color: #ffd700;
       text-decoration: none;
     }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+      .hero-image {
+        height: 40vh;
+      }
+      .projects {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+      }
+      .project-content h3 {
+        font-size: 1.25rem;
+      }
+      .project-content p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -96,9 +153,15 @@
     <p>Cinematic storytelling through rhythm, sound, and light</p>
   </header>
 
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="hero-image"></div>
 
-  <section class="projects">
+  <section id="projects" class="projects">
     <div class="project">
       <img src="https://via.placeholder.com/600x400/222/fff?text=Project+1+Preview" alt="Project 1 Preview">
       <div class="project-content">
