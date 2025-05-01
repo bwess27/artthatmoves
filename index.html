@@ -6,39 +6,50 @@
   <title>BW | Motion Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --accent: #fd5e53;
+      --dark-bg: #1b1b1f;
+      --mid-bg: #2a2a31;
+      --light-text: #fff8f2;
+      --muted-text: #cccccc;
+      --header-text: #ffe6de;
+      --highlight: #ff9b85;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #1b1b1f;
+      background-color: var(--dark-bg);
       color: #ffffff;
       overflow-x: hidden;
     }
     header {
       text-align: center;
       padding: 4rem 1rem 1rem;
-      background: #fd5e53;
-      color: #fff8f2;
+      background: var(--mid-bg);
+      color: var(--header-text);
       position: relative;
     }
     header h1 {
       font-size: 3rem;
       margin: 0;
+      color: var(--accent);
       animation: fadeInDown 1s ease-out;
     }
     header p {
       font-size: 1.25rem;
-      color: #ffe6de;
+      color: var(--highlight);
       margin-top: 0.5rem;
       animation: fadeInUp 1s ease-out;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #2a2a31;
+      background-color: var(--mid-bg);
       padding: 1rem;
     }
     nav a {
-      color: #fd5e53;
+      color: var(--accent);
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
@@ -63,7 +74,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       padding: 3rem 2rem;
-      background: #2a2a31;
+      background: var(--mid-bg);
       animation: fadeIn 2s ease-in;
     }
     .project {
@@ -89,21 +100,21 @@
     .project-content h3 {
       margin-top: 0;
       font-size: 1.5rem;
-      color: #fd5e53;
+      color: var(--accent);
     }
     .project-content p {
-      color: #cccccc;
+      color: var(--muted-text);
       font-size: 0.95rem;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #1b1b1f;
+      background: var(--dark-bg);
       color: #999;
       font-size: 0.9rem;
     }
     a {
-      color: #fd5e53;
+      color: var(--accent);
       text-decoration: none;
     }
     @keyframes fadeIn {
