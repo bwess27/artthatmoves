@@ -11,11 +11,13 @@
       font-family: 'Roboto', sans-serif;
       background-color: #0f0f0f;
       color: #ffffff;
+      overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 4rem 1rem 2rem;
-      background: linear-gradient(90deg, #111, #222);
+      padding: 4rem 1rem 1rem;
+      background: linear-gradient(90deg, #141e30, #243b55);
+      color: #f0f0f0;
     }
     header h1 {
       font-size: 3rem;
@@ -23,30 +25,46 @@
     }
     header p {
       font-size: 1.25rem;
-      color: #aaa;
+      color: #ccc;
       margin-top: 0.5rem;
+    }
+    .hero-image {
+      background-image: url('https://images.unsplash.com/photo-1605939057927-df77a2eb6cf9?auto=format&fit=crop&w=1950&q=80');
+      height: 60vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
     }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      background: #121212;
     }
     .project {
-      background: #1a1a1a;
-      border-radius: 10px;
+      background: #1f1f1f;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
     }
-    .project iframe,
     .project img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 200px;
+      object-fit: cover;
     }
     .project-content {
       padding: 1rem;
@@ -56,17 +74,18 @@
       font-size: 1.5rem;
     }
     .project-content p {
-      color: #ccc;
+      color: #bbb;
       font-size: 0.95rem;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      background: #0c0c0c;
       color: #666;
       font-size: 0.9rem;
     }
     a {
-      color: #ffcc00;
+      color: #ffd700;
       text-decoration: none;
     }
   </style>
@@ -77,12 +96,28 @@
     <p>Cinematic storytelling through rhythm, sound, and light</p>
   </header>
 
+  <div class="hero-image"></div>
+
   <section class="projects">
     <div class="project">
-      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <img src="https://via.placeholder.com/600x400/222/fff?text=Project+1+Preview" alt="Project 1 Preview">
       <div class="project-content">
-        <h3>Project Title</h3>
-        <p>Brief description of the project, your role, tools used, and creative direction.</p>
+        <h3>Project Title 1</h3>
+        <p>Short description about your role, tools used, and the creative process behind this motion design piece.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/600x400/333/eee?text=Project+2+Preview" alt="Project 2 Preview">
+      <div class="project-content">
+        <h3>Project Title 2</h3>
+        <p>A brief insight into your storytelling approach, composition techniques, and stylistic choices.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/600x400/444/ccc?text=Project+3+Preview" alt="Project 3 Preview">
+      <div class="project-content">
+        <h3>Project Title 3</h3>
+        <p>This space can showcase your animation chops, trailer cuts, or special FX breakdowns.</p>
       </div>
     </div>
   </section>
