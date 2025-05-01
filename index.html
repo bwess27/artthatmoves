@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BW | Motion Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(90deg, #111, #222);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .project {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    .project iframe,
+    .project img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .project-content {
+      padding: 1rem;
+    }
+    .project-content h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    .project-content p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BW | Motion Designer</h1>
+    <p>Cinematic storytelling through rhythm, sound, and light</p>
+  </header>
+
+  <section class="projects">
+    <div class="project">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <div class="project-content">
+        <h3>Project Title</h3>
+        <p>Brief description of the project, your role, tools used, and creative direction.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 BW | Portfolio built with 💻 and vision. <br/>
+    Connect: <a href="mailto:your.email@example.com">your.email@example.com</a>
+  </footer>
+</body>
+</html>
