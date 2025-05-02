@@ -160,6 +160,13 @@
       .project-content p {
         font-size: 0.9rem;
       }
+      .hover-preview {
+        width: 100%;
+        object-fit: cover;
+      }
+      .hover-preview:hover {
+       /* Start playback on hover via JS */
+      }
     }
   </style>
 </head>
@@ -179,7 +186,7 @@
 
   <section id="projects" class="projects">
     <div class="project">
-     <video autoplay loop muted playsinline width="100%"> 
+     <video class="hover-preview" muted loop playsinline preload="metadata"> 
       <source src="media/freecompress-brw_opener_showpackage_03.mp4" type="video/mp4">
       Your browser does not support the video tag.
      </video>
@@ -209,5 +216,16 @@
     &copy; 2025 BW | Portfolio built with 💻 and vision. <br/>
     Connect: <a href="mailto:your.email@example.com">your.email@example.com</a>
   </footer>
+
+  <script>
+    document.querySelectorAll('.hover-preview').forEach(video => {
+     video.addEventListener('mouseenter', () => video.play());
+     video.addEventListener('mouseleave', () => {
+     video.pause();
+     video.currentTime = 0;
+     });
+   });
+  </script>
+
 </body>
 </html>
